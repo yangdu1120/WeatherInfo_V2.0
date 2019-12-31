@@ -23,6 +23,12 @@ import com.goat.weatherInfo.utils.MathUtil;
 import com.goat.weatherInfo.utils.TimeUtil;
 import com.goat.weatherInfo.utils.WeathericonUtil;
 
+
+/**
+ * Created by Remy on 28-12-2019.
+ * details page, to show a list of the "hourly" data
+ */
+
 public class WeatherDetailActivity extends AppCompatActivity {
 
     private LayoutInflater inflater;
@@ -86,17 +92,11 @@ public class WeatherDetailActivity extends AppCompatActivity {
             holder.setTime(time);
 
             Log.e(TAG,"--getTime()="+ HourlyData.getHourlyDatas().get(position).getTime() );
-            
-            if(Integer.parseInt(time) > Integer.parseInt(timestamp)){
-                //holder.getPosition().setRelativeLayout(Color.parseColor("#B6B4B4"));
 
-                Log.e(TAG,"-- position="+ position);
-            }
         }
 
         @Override
         public int getItemCount() {
-
             return HourlyData.getHourlyDatas().size();
         }
     }

@@ -3,6 +3,7 @@ package com.goat.weatherInfo.activities;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.goat.weatherInfo.R;
 import com.goat.weatherInfo.events.ErrorEvent;
 import com.goat.weatherInfo.events.WeatherEvent;
@@ -15,7 +16,6 @@ import com.goat.weatherInfo.utils.WeathericonUtil;
 
 import android.Manifest;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -52,6 +52,10 @@ import permissions.dispatcher.OnShowRationale;
 import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
+/**
+ * Created by Remy on 28-12-2019.
+ * landing page, to show the current weather
+ */
 
 @RuntimePermissions
 public class MainActivity extends AppCompatActivity {
@@ -66,9 +70,6 @@ public class MainActivity extends AppCompatActivity {
     //Defaute location (LA)
     private double latitude = 34.0686;
     private double longitude = -118.3228;
-
-    // 获取位置服务
-    String serviceName = Context.LOCATION_SERVICE;
 
     @BindView(R.id.iv_refresh)
     ImageView iv_refresh;
@@ -255,7 +256,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        Log.e(TAG, "-----------location----" + location);
         if (location != null) {
             latitude = location.getLatitude();
             longitude = location.getLongitude();

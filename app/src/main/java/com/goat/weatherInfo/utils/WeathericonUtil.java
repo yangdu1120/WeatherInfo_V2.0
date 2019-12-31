@@ -7,9 +7,9 @@ import java.util.Map;
 
 import com.goat.weatherInfo.R;
 /**
- * Created by MEHAKMEET on 24-12-2017.
+ * Created by Remy on 28-12-2019.
+ * weather resources related map
  */
-
 public class WeathericonUtil {
 
     public static final Map<String, Integer> ICONS;

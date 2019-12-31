@@ -2,9 +2,11 @@ package com.goat.weatherInfo.utils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
-
+/**
+ * Created by Remy on 28-12-2019.
+ * Time related tools
+ */
 public class TimeUtil {
 
     public static String getTime(Integer dateInt) {

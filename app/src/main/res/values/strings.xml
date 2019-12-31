@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">WeatherInfo</string>
-    <string name="permission_location_rationale">In order to get weather infomation of current location,this app needs get your location.</string>
+    <string name="permission_location_rationale">In order to get weather information of current
+        location, this app needs get your location.</string>
     <string name="button_allow">Allow</string>
     <string name="button_deny">Don\'t Allow</string>
     <string name="separator">/</string>
