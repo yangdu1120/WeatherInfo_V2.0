@@ -5,6 +5,16 @@
     <string name="button_allow">Allow</string>
     <string name="button_deny">Don\'t Allow</string>
     <string name="separator">/</string>
+    <string name="city">Asia/Hong_Kong</string>
+    <string name="currentDate">01-01 12:20</string>
+    <string name="summary">Clear</string>
+    <string name="current_temp">"24\u00b0C"</string>
+    <string name="low_temp">"22\u00b0C"</string>
+    <string name="high_temp">"28\u00b0C"</string>
+    <string name="flag">-</string>
+    <string name="detail_info">Detail Info</string>
+    <string name="start_update">"Started location updates!"</string>
+    <string name="errorMessage">"Location settings are inadequate, and cannot be fixed here. Fix in Settings."</string>
     <string name="content_description_default">Icon description</string>
     <string name="title_activity_mm">MMActivity</string>
 

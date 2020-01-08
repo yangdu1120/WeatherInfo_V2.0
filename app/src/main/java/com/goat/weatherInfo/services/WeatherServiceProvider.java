@@ -6,6 +6,7 @@ import com.goat.weatherInfo.events.ErrorEvent;
 import com.goat.weatherInfo.events.WeatherEvent;
 import com.goat.weatherInfo.models.Currently;
 import com.goat.weatherInfo.models.Weather;
+import com.goat.weatherInfo.utils.LogUtil;
 
 
 import org.greenrobot.eventbus.EventBus;
@@ -26,11 +27,10 @@ public class WeatherServiceProvider {
         weatherData.enqueue(new Callback<Weather>() {
             @Override
             public void onResponse(Call<Weather> call, Response<Weather> response) {
-
                 if (response.body() != null) {
                     Weather weather = response.body();
                     Currently currently = weather.getCurrently();
-                    Log.e("currentTemperature:", currently.getTemperature().toString());
+                    LogUtil.v("currentTemperature:", currently.getTemperature().toString());
 
                     EventBus.getDefault().post(new WeatherEvent(weather));
                 } else {
@@ -40,7 +40,6 @@ public class WeatherServiceProvider {
 
             @Override
             public void onFailure(Call<Weather> call, Throwable t) {
-
                 EventBus.getDefault().post(new ErrorEvent("Unable to make weather server"));
             }
         });

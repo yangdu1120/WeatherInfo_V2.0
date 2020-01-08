@@ -10,4 +10,9 @@ public class MathUtil {
         return (int) Math.round((temp - 32) * (5.0 / 9.0));
     }
 
+    //round temp
+    public static int tempConverter2F(Double temp) {
+        return (int) Math.round((temp));
+    }
+
 }

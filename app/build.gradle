@@ -44,10 +44,10 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
     implementation 'org.greenrobot:eventbus:3.1.1'
 
+    // location play services
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
     // dexter runtime permissions
     implementation 'com.karumi:dexter:4.2.0'
 
-    //permissionsdispatcher
-    implementation 'com.github.hotchemi:permissionsdispatcher:4.1.0'
-    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:4.1.0"
+
 }
